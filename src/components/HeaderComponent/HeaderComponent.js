@@ -6,7 +6,7 @@ const Header = () => {
    return (
         <nav className="header-nav">
             <div className="header-logo">
-                <h2>BestOfMovies</h2>
+                <h2>Best<span className="of">Of</span>Movies</h2>
             </div>
             <form className="header-form">
                 <input type="text" name="search" placeholder="Search..."/>

@@ -1,4 +1,50 @@
 .home-container{
     padding-top: 8vh;
     height: 92vh;
+    display: flex;
+}
+
+.filters-container{
+  min-width:350px;
+  border: 1px solid green;
+}
+
+.movies-container{
+    width: 100%;
+    border: 1px solid red;
+}
+
+.countries-container{
+    border: 1px solid yellow;
+    height: 50%;   
+}
+
+.countries-title, .genres-title{ 
+    display: inline-block;   
+    padding: 10px 0;
+    color:#4aa130;
+    border-bottom: 5px solid white;
+    margin-left: 14px;
+}
+
+.genres-container{    
+    border: 1px solid blue;
+    height: 50%;
+}
+
+.filters-row{
+    border: 1px solid black;
+    margin-top: 10px;    
+    display: flex;
+    justify-content: space-around;
+}
+
+.country{
+    text-decoration: none;
+    color:#4aa130;
+    background-color: whitesmoke;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
 }

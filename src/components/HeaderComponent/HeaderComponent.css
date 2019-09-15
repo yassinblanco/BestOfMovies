@@ -8,6 +8,14 @@
     width: 100%;
 }
 
+.header-logo h2{
+    color: whitesmoke;
+}
+
+.of{
+    color: #4aa130;
+}
+
 .header-form{
     width: 33%;
 }
@@ -34,7 +42,7 @@
 
 .header-login{
     font-size: 15px;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     background-color: #4aa130;
