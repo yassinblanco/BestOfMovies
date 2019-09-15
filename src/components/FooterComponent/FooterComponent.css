@@ -1,0 +1,9 @@
+.footer-container{
+    height: 8vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #4a4c4f;
+    color: whitesmoke;
+    font-size: 12px;
+}
