@@ -24,18 +24,32 @@ const RenderFilters = ({items}) => {
 }
 
 class Home   extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            toggle : true
+        }
+    }
+
+    onToggle = () => {
+             
+        this.setState({toggle : !this.state.toggle});
+    }
     
     render(){
-        //console.log(this.props.countries);
-        //console.log(RenderCountries(this.props.countries));
+        const {toggle} = this.state;
+         
         return(
             <div className="home-container">
-                <div className="filters-container">
-                    <div className="filter-container">
+                <div className={toggle ? "filters-container filters-container-md": "filters-container" }>
+                    <div className="toggle-button">
+                        <i className="fa fa-bars" onClick={this.onToggle} aria-hidden="true"></i>
+                    </div>                                    
+                    <div className={toggle ? "filter-container filter-container-md": "filter-container" }>
                         <h4 className="filter-title">Countries :</h4>                        
                          <RenderFilters items={this.props.countries} />
                     </div>
-                    <div className="filter-container">
+                    <div className={toggle ? "filter-container filter-container-md": "filter-container" }>
                         <h4 className="filter-title">Genres :</h4>
                         <RenderFilters items={this.props.genres} />                        
                     </div>

@@ -6,10 +6,10 @@
 
 .filters-container{
   min-width:350px;
-  border-right: 3px solid #4aa130;
+  border-right: 3px solid #4aa130;  
 }
 
-.movies-container{
+.movies-container{    
     width: 100%;    
 }
 
@@ -40,4 +40,28 @@
     border-radius: 5px;
     width: 150px;
     text-align: center;
+}
+
+.toggle-button{
+    display: none;
+}
+
+@media screen and (max-width: 992px){
+    .filters-container-md{
+        min-width: 100px;
+        width: 100px;
+    }
+
+    .filter-container-md{
+        display: none;
+    }
+      
+    .toggle-button{
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        color: #4aa130;
+        text-align: center;
+        padding: 10px 0;
+    }   
 }

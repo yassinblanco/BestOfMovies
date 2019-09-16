@@ -4,7 +4,7 @@ import './HeaderComponent.css';
 
 const Header = () => {
    return (
-        <nav className="header-nav">
+        <nav className="header-nav">    
             <div className="header-logo">
                 <h2>Best<span className="of">Of</span>Movies</h2>
             </div>
