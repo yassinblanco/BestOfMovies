@@ -15,7 +15,7 @@ const Header = () => {
                 </button>
             </form>
             <button className="header-login" type="button">
-                Login
+                Login <i className="fa fa-sign-in" aria-hidden="true"></i>
             </button>
         </nav>
    );

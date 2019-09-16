@@ -6,20 +6,18 @@
 
 .filters-container{
   min-width:350px;
-  border: 1px solid green;
+  border-right: 3px solid #4aa130;
 }
 
 .movies-container{
-    width: 100%;
-    border: 1px solid red;
+    width: 100%;    
 }
 
-.countries-container{
-    border: 1px solid yellow;
+.filter-container{ 
     height: 50%;   
 }
 
-.countries-title, .genres-title{ 
+.filter-title{ 
     display: inline-block;   
     padding: 10px 0;
     color:#4aa130;
@@ -27,19 +25,14 @@
     margin-left: 14px;
 }
 
-.genres-container{    
-    border: 1px solid blue;
-    height: 50%;
-}
-
-.filters-row{
-    border: 1px solid black;
+.filter-row{
+    
     margin-top: 10px;    
     display: flex;
     justify-content: space-around;
 }
 
-.country{
+.filter{
     text-decoration: none;
     color:#4aa130;
     background-color: whitesmoke;
