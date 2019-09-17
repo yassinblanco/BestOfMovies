@@ -1,0 +1,26 @@
+.carousel-container{
+    border: 1px solid #4aa130;  
+    padding: 0;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    color: #4aa130;
+    background-color: whitesmoke;
+}
+
+.carousel-title{
+    padding: 10px;
+    border-bottom: 1px solid #4aa130;
+    margin-bottom: 10px;  
+}
+
+.carousel-chevron{
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #4aa130;
+    color: whitesmoke;
+    outline: none;
+    border: none;
+    cursor: pointer; 
+}

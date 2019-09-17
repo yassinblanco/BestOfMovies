@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Carousel from './CarouselComponent/CarouselComponent';
 import './HomeComponent.css';
 
 function RenderRow(arr){
@@ -43,7 +44,8 @@ class Home   extends Component{
             <div className="home-container">
                 <div className={toggle ? "filters-container filters-container-md": "filters-container" }>
                     <div className="toggle-button">
-                        <i className="fa fa-bars" onClick={this.onToggle} aria-hidden="true"></i>
+                        {toggle ? <i className="fa fa-bars" onClick={this.onToggle} aria-hidden="true"></i> 
+                        : <i class="fa fa-times" onClick={this.onToggle} aria-hidden="true"></i>}
                     </div>                                    
                     <div className={toggle ? "filter-container filter-container-md": "filter-container" }>
                         <h4 className="filter-title">Countries :</h4>                        
@@ -54,7 +56,9 @@ class Home   extends Component{
                         <RenderFilters items={this.props.genres} />                        
                     </div>
                 </div>
-                <div className="movies-container"></div>
+                <div className="movies-container">
+                <Carousel/>
+                </div>
             </div>
         );
     }
