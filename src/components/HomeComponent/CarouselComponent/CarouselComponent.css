@@ -7,6 +7,7 @@
     border-radius: 5px;
     color: #4aa130;
     background-color: whitesmoke;
+    margin-bottom: 20px;
 }
 
 .carousel-title{
@@ -16,13 +17,15 @@
 }
 
 .carousel-chevron{
-    padding: 5px;
-    border-radius: 50%;
+    padding: 10px;
+    border-radius: 5px;
     background-color: #4aa130;
     color: whitesmoke;
     outline: none;
     border: none;
-    cursor: pointer; 
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.8;
 }
 
 .carousel-item{

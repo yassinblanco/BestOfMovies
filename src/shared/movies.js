@@ -5,7 +5,8 @@ export const MOVIES = [
       country: "Japan",
       director: "Akira Kurosawa",
       image: "assets/images/seven_samurai.jpg",
-      new: true
+      year: 1954,
+      rate: 8.6
     },
     {
       id: 2,
@@ -13,7 +14,8 @@ export const MOVIES = [
       country: "Korea",
       director: "Park Chan-wook",
       image: "assets/images/oldboy.jpg",
-      new: true
+      year: 2003,
+      rate: 8.4
     },
     {
       id: 3,
@@ -21,7 +23,8 @@ export const MOVIES = [
       country: "Argentina",
       director: "Juan José Campanella",
       image: "assets/images/the_secret_in_their_eyes.jpg",
-      new: true
+      year: 2009,
+      rate: 8.2
     },
     {
       id: 4,
@@ -29,7 +32,8 @@ export const MOVIES = [
       country: "Korea",
       director: "Bong Joon Ho",
       image: "assets/images/parasite.jpg",
-      new: true
+      year: 2019,
+      rate: 8.5
     },
     {
       id: 5,
@@ -37,7 +41,8 @@ export const MOVIES = [
       country: "Japan",
       director: "Akira Kurosawa",
       image: "assets/images/rashomon.jpg",
-      new: true
+      year: 1950,
+      rate:8.2
     },
     {
       id: 6,
@@ -45,7 +50,8 @@ export const MOVIES = [
       country: "Argentina",
       director: "Damián Szifron",
       image: "assets/images/wild_tales.jpg",
-      new: false
+      year: 2014,
+      rate:8.1
     },
     {
       id: 7,
@@ -53,7 +59,8 @@ export const MOVIES = [
       country: "Japan",
       director: "Akira Kurosawa",
       image: "assets/images/ikiru.jpg",
-      new: false
+      year: 1952,
+      rate:8.3
     },
     {
       id: 8,
@@ -61,7 +68,8 @@ export const MOVIES = [
       country: "India",
       director: "Rajkumar Hirani",
       image: "assets/images/three_idiots.jpg",
-      new: false
+      year: 2009,
+      rate: 8.4
     },
     {
       id: 9,
@@ -69,7 +77,8 @@ export const MOVIES = [
       country: "Argentina",
       director: "Fabián Bielinsky",
       image: "assets/images/nine_queens.jpg",
-      new: false
+      year:2000,
+      rate:7.9
     },
     {
       id: 10,
@@ -77,6 +86,7 @@ export const MOVIES = [
       country: "France",
       director: "Jacques Audiard",
       image: "assets/images/a_prophet.jpg",
-      new: false
+      year: 2009,
+      rate:7.9
     }
   ];

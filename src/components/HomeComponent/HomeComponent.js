@@ -25,7 +25,11 @@ const RenderFilters = ({items}) => {
 }
 
 function RenderNewestMovies(movies){
-    return movies.filter(movie => movie.new);
+    return movies.sort((a,b) => a.year < b.year ? 1 : -1);
+}
+
+function RenderTopRatedMovies(movies){
+    return movies.sort((a,b) => a.rate < b.rate ? 1 : -1);
 }
 
 class Home   extends Component{
@@ -61,7 +65,14 @@ class Home   extends Component{
                     </div>
                 </div>
                 <div className="movies-container">
-                <Carousel newestMovies = {RenderNewestMovies(this.props.movies)}/>
+                        <Carousel 
+                            movies = {RenderNewestMovies([...this.props.movies])}
+                            title = {"Newest Movies"}
+                        />
+                        <Carousel 
+                            movies = {RenderTopRatedMovies([...this.props.movies])}
+                            title = {"Top Rated Movies"}
+                        />
                 </div>
             </div>
         );
