@@ -24,6 +24,10 @@ const RenderFilters = ({items}) => {
    return RenderRow(arr);
 }
 
+function RenderNewestMovies(movies){
+    return movies.filter(movie => movie.new);
+}
+
 class Home   extends Component{
     constructor(props){
         super(props);
@@ -57,7 +61,7 @@ class Home   extends Component{
                     </div>
                 </div>
                 <div className="movies-container">
-                <Carousel/>
+                <Carousel newestMovies = {RenderNewestMovies(this.props.movies)}/>
                 </div>
             </div>
         );

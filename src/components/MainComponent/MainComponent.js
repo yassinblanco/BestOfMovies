@@ -5,6 +5,7 @@ import Home from '../HomeComponent/HomeComponent';
 import Footer from '../FooterComponent/FooterComponent';
 import {COUNTRIES} from "../../shared/countries";
 import {GENRES} from "../../shared/genres";
+import {MOVIES} from "../../shared/movies";
 
 
 class Main extends Component{
@@ -13,7 +14,8 @@ class Main extends Component{
         super(props);
         this.state = {
             countries: COUNTRIES,
-            genres: GENRES
+            genres: GENRES,
+            movies: MOVIES
         }
     }
 
@@ -22,7 +24,10 @@ class Main extends Component{
         return(
             <div className="main-container">
                 <Header />
-                <Home countries={this.state.countries} genres={this.state.genres}/>
+                <Home countries={this.state.countries}
+                      genres={this.state.genres}
+                      movies={this.state.movies}
+                />
                 <Footer />
             </div>
         );
