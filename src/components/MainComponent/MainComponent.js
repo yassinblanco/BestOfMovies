@@ -17,17 +17,18 @@ class Main extends Component{
             genres: GENRES,
             movies: MOVIES
         }
-    }
+    }  
 
     render(){
         
         return(
             <div className="main-container">
                 <Header />
-                <Home countries={this.state.countries}
-                      genres={this.state.genres}
-                      movies={this.state.movies}
-                />
+                <Home                    
+                    countries={this.state.countries}
+                    genres={this.state.genres}
+                    movies={this.state.movies}
+                />                
                 <Footer />
             </div>
         );

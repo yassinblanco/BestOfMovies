@@ -16,8 +16,8 @@ export default (props) => {
         activeItemIndex={activeItemIndex}
         numberOfCards={5}
         gutter={12}
-        leftChevron={<button className="carousel-chevron"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>}
-        rightChevron={<button className="carousel-chevron"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>}
+        leftChevron={<button className="carousel-chevron"><i className="fa fa-chevron-left" aria-hidden="true"></i></button>}
+        rightChevron={<button className="carousel-chevron"><i className="fa fa-chevron-right" aria-hidden="true"></i></button>}
         outsideChevron={false}
         chevronWidth={chevronWidth}
         slideToScroll={1}

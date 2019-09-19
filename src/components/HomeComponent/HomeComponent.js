@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Carousel from './CarouselComponent/CarouselComponent';
+import Movies from "../MoviesComponent/MoviesComponent";
 import './HomeComponent.css';
+import {Route,Redirect,Switch,Link} from "react-router-dom";
 
 function RenderRow(arr){
     let i = 0; const result = [];
@@ -18,18 +20,33 @@ function RenderRow(arr){
 const RenderFilters = ({items}) => {
    const arr = items.map( item => {
         return(
-            <a  key={item.id} className="filter" href={`/${item.name}`}>{item.name}</a>
+            <Link className="filter" to={{ pathname: "/movies", search: "?filter="+item.name }}>{item.name}</Link>            
         )
    }); 
    return RenderRow(arr);
 }
-
-function RenderNewestMovies(movies){
-    return movies.sort((a,b) => a.year < b.year ? 1 : -1);
+const Carousels = ({movies}) => {
+    return(
+        <React.Fragment>
+            <Carousel 
+                movies = {[...movies].sort((a,b) => a.year < b.year ? 1 : -1)}
+                title = {"Newest Movies"}
+            />
+            <Carousel 
+                movies = {[...movies].sort((a,b) => a.rate < b.rate ? 1 : -1)}
+                title = {"Top Rated Movies"}
+            />
+        </React.Fragment>
+    )
 }
 
-function RenderTopRatedMovies(movies){
-    return movies.sort((a,b) => a.rate < b.rate ? 1 : -1);
+const MoviesWithFilter = ({search}) =>{
+    const searchParams = new URLSearchParams(search);
+    
+    if(searchParams.has("filter"))
+       return <Movies filter={searchParams.get("filter")} />    
+    else
+       return <div>404 NOT FOUND!</div>
 }
 
 class Home   extends Component{
@@ -47,13 +64,13 @@ class Home   extends Component{
     
     render(){
         const {toggle} = this.state;
-         
+        console.log(this.props); 
         return(
             <div className="home-container">
                 <div className={toggle ? "filters-container filters-container-md": "filters-container" }>
                     <div className="toggle-button">
                         {toggle ? <i className="fa fa-bars" onClick={this.onToggle} aria-hidden="true"></i> 
-                        : <i class="fa fa-times" onClick={this.onToggle} aria-hidden="true"></i>}
+                        : <i className="fa fa-times" onClick={this.onToggle} aria-hidden="true"></i>}
                     </div>                                    
                     <div className={toggle ? "filter-container filter-container-md": "filter-container" }>
                         <h4 className="filter-title">Countries :</h4>                        
@@ -65,14 +82,12 @@ class Home   extends Component{
                     </div>
                 </div>
                 <div className="movies-container">
-                        <Carousel 
-                            movies = {RenderNewestMovies([...this.props.movies])}
-                            title = {"Newest Movies"}
-                        />
-                        <Carousel 
-                            movies = {RenderTopRatedMovies([...this.props.movies])}
-                            title = {"Top Rated Movies"}
-                        />
+                    <Switch>
+                        <Route exact path="/" component={() => <Carousels movies = {this.props.movies}/>  }/>
+                        <Route path="/movies" component={({location}) => <MoviesWithFilter search={location.search}/>} />
+                        <Redirect to="/"/>
+                    </Switch>
+                      
                 </div>
             </div>
         );
