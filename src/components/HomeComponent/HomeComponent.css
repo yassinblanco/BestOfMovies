@@ -13,7 +13,7 @@
     width: 100%;
     padding: 20px;
     overflow-x: hidden;
-        
+    color: #4aa130;        
 }
 
 .filter-container{ 
@@ -28,8 +28,7 @@
     margin-left: 14px;
 }
 
-.filter-row{
-    
+.filter-row{    
     margin-top: 10px;    
     display: flex;
     justify-content: space-around;

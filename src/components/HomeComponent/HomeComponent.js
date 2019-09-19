@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import Carousel from './CarouselComponent/CarouselComponent';
 import Movies from "../MoviesComponent/MoviesComponent";
+import Movie from "../MovieComponent/MovieComponent";
 import './HomeComponent.css';
 import {Route,Redirect,Switch,Link} from "react-router-dom";
+
 
 function RenderRow(arr){
     let i = 0; const result = [];
@@ -40,11 +42,11 @@ const Carousels = ({movies}) => {
     )
 }
 
-const MoviesWithFilter = ({search}) =>{
+const MoviesWithFilter = ({search, movies}) =>{
     const searchParams = new URLSearchParams(search);
     
     if(searchParams.has("filter"))
-       return <Movies filter={searchParams.get("filter")} />    
+       return <Movies filter={searchParams.get("filter")} movies={movies} />    
     else
        return <div>404 NOT FOUND!</div>
 }
@@ -63,8 +65,7 @@ class Home   extends Component{
     }
     
     render(){
-        const {toggle} = this.state;
-        console.log(this.props); 
+        const {toggle} = this.state;        
         return(
             <div className="home-container">
                 <div className={toggle ? "filters-container filters-container-md": "filters-container" }>
@@ -84,7 +85,10 @@ class Home   extends Component{
                 <div className="movies-container">
                     <Switch>
                         <Route exact path="/" component={() => <Carousels movies = {this.props.movies}/>  }/>
-                        <Route path="/movies" component={({location}) => <MoviesWithFilter search={location.search}/>} />
+                        <Route exact path="/movies" component={({location}) => <MoviesWithFilter
+                         search={location.search} movies={this.props.movies}/>} />
+                        <Route path="/movies/:id" component={({match}) => <Movie 
+                            movie = {this.props.movies.filter(movie => movie.id === parseInt(match.params.id))[0]}/>} /> 
                         <Redirect to="/"/>
                     </Switch>
                       

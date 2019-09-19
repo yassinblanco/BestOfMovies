@@ -5,6 +5,7 @@ export const MOVIES = [
       country: "Japan",
       director: "Akira Kurosawa",
       image: "assets/images/seven_samurai.jpg",
+      genre: "Adventure",
       year: 1954,
       rate: 8.6
     },
@@ -14,6 +15,7 @@ export const MOVIES = [
       country: "Korea",
       director: "Park Chan-wook",
       image: "assets/images/oldboy.jpg",
+      genre: "Drama",
       year: 2003,
       rate: 8.4
     },

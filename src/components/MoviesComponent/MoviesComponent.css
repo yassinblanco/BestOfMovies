@@ -1,0 +1,26 @@
+.grid-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.movies-grid{
+    text-align: center;
+    max-width: 950px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;    
+    justify-content: center;
+}
+.grid-item{
+    margin:  10px;
+}
+
+.grid-item-link{
+    text-decoration: none;
+    color: #4aa130; 
+}
+
+.grid-item-image{
+    width: 100%;
+}
+
