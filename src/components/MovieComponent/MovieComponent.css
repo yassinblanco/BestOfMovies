@@ -1,0 +1,21 @@
+.movie-container{
+    text-align: center;
+}
+
+.movie-title{
+    margin-bottom: 30px;
+}
+
+table,td{    
+    border: 2px solid #4aa130;
+    border-collapse: collapse;
+    background-color: whitesmoke;    
+}
+
+td{
+    padding: 10px;
+}
+
+td img{
+    
+}

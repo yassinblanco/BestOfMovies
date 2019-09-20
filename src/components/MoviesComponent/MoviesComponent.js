@@ -4,8 +4,7 @@ import {Link} from "react-router-dom";
 
 
 
-const RenderMovies = ({movies, filter}) => {
-    console.log(filter)
+const RenderMovies = ({movies, filter}) => {    
     return movies.filter(movie => (filter === movie.country) || (filter === movie.genre))
            .map( movie => {
          return (

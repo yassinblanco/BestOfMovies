@@ -1,12 +1,15 @@
 import React from 'react';
 import './HeaderComponent.css';
+import {Link} from 'react-router-dom';
 
 
 const Header = () => {
    return (
         <nav className="header-nav">    
             <div className="header-logo">
-                <h2>Best<span className="of">Of</span>Movies</h2>
+                <h2>
+                    <Link to="/">Best<span className="of">Of</span>Movies</Link>
+                </h2>
             </div>
             <form className="header-form">
                 <input type="text" name="search" placeholder="Search..."/>
